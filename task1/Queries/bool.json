@@ -1,0 +1,17 @@
+{
+    "query": {
+      "bool": {
+        "must": [
+          { "match": { "title": "Starboy" }},
+          { "match": { "title": "Positions" }},
+          { "match": { "author": "The Weeknd" }},
+          { "bool": {
+              "must_not": [
+                { "match": { "producer": "Will Blunt" }}
+              ]
+            }
+          }
+        ]
+      }
+    }
+  }
